@@ -1,4 +1,4 @@
-export const channel = "eka";
+export const channel = "ws_rtmp";
 
 // export const wsUrl = "ws://localhost:8080";
 

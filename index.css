@@ -1,10 +1,10 @@
-* {
-  box-sizing: border-box;
-}
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap");
 body {
   margin: 0;
   padding: 24px;
-  font-family: sans-serif;
+  background: black;
+  color: white;
+  font-family: "Nunito Sans", sans-serif;
 }
 h1,
 h2,
@@ -13,4 +13,21 @@ h4,
 h5,
 h6 {
   margin-top: 0;
+}
+button {
+  display: inline-block;
+  border-radius: 100px;
+  color: white;
+  padding: 8px 16px;
+  font-size: 16px;
+  background: none;
+  border: 2px solid white;
+  font: "Nunito Sans", sans-serif;
+  outline: none;
+}
+button:hover {
+  filter: brightness(90%);
+}
+a {
+  color: white;
 }

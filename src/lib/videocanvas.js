@@ -38,7 +38,7 @@ export const useVideoCanvas = () => {
 
   ws.addEventListener("open", (e) => {
     // TODO: Make FPS configurable
-    mediaStream = canvasRef.value.captureStream(30);
+    mediaStream = canvasRef.value.captureStream(15);
     mediaRecorder = new MediaRecorder(mediaStream, {
       mimeType: "video/webm;codecs=h264",
       // TODO: Make BPS configurable

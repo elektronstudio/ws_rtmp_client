@@ -12,7 +12,9 @@ const OpenviduVideoElement = {
     return { videoRef, canvasRef };
   },
   template: `
+    <h3>Webcam output</h3>
     <video ref="videoRef" autoplay />
+    <h3>Canvas output</h3>
     <canvas ref="canvasRef" style="display: block;" />
   `,
 };

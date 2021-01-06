@@ -1,41 +1,26 @@
 import { createApp } from "./src/deps/vue.js";
-
-import { useChat, useUser, useOpenvidu } from "./src/deps/live.js";
-
+import { useUser, useOpenvidu } from "./src/deps/live.js";
 import { OpenviduCanvas } from "./src/componets/index.js";
-
 import { channel } from "./config.js";
 
 const App = {
   components: { OpenviduCanvas },
   setup() {
     return {
-      ...useChat(channel),
       ...useUser(),
       ...useOpenvidu(channel),
     };
   },
   template: `
-  <h2>Chat</h2>
 
-  Your username: {{ userName }}
-  
-  <button @click="onUserNameChange">Change</button>
-  
-  <br />
+  <h2>WebRTC to RTMP demo</h2>
 
-  <textarea v-model="newMessage" ref="textareaEl"></textarea>
-  
-  <br />
-  
-  <button @click="onNewMessage">Send message</button>
-  
-  <pre ref="scrollEl">{{ messages }}</pre>
+  See the output at <a href="https://elektron.live/ws_rtmp" target="_blank">https://elektron.live/ws_rtmp</a> (note it takes a while to start)
 
-  <h2>WebRTC</h2>
-  
-  <button @click="joinSession">Join</button>
-  <button @click="leaveSession">Leave</button>
+  <br /><br />
+
+  <button @click="joinSession">Join session</button>
+  <button @click="leaveSession">Leave session</button>
   
   <p><openvidu-canvas :publisher="publisher" /></p>
   
