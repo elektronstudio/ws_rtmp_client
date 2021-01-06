@@ -12,10 +12,16 @@ const OpenviduVideoElement = {
     return { videoRef, canvasRef };
   },
   template: `
-    <h3>Webcam output</h3>
-    <video ref="videoRef" autoplay />
-    <h3>Canvas output</h3>
-    <canvas ref="canvasRef" style="display: block;" />
+    <div style="display: flex">
+      <div>
+        <h3>WebRTC input </h3>
+        <video ref="videoRef" autoplay />
+      </div>
+      <div>
+        <h3>Canvas output to RTMP</h3>
+        <canvas ref="canvasRef" style="display: block;" />
+      </div>
+    </div>
   `,
 };
 
